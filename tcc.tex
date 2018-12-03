@@ -368,7 +368,7 @@ Um dos fatores importante em determinar o quão pequeno deve ser um serviço é 
     \label{fig:newman}
 \end{figure}
 
-\section{Computação em nuvem}
+\section{Computação em nuvem} \label{comp_nuvem}
 Uma das transformações na maneira de fazer computação é utilizá-la como um modelo de serviços que são entregues de uma maneira similar a serviços tradicionais como eletricidade, água e gás. Nesse modelo, usuários acessam os serviços baseado em suas necessidades sem considerar onde os serviços são armazenados e como são entregues. Entre os paradigmas que abordaram essa visão de entregar computação como um serviço está incluso computação distribuída (\textit{Grid Computing}), computação em \textit{cluster} \textit{(Cluster Computing}) e mais recente computação em nuvem \textit{(Cloud Computing}) (\citeauthoronline{Buyya}, \citeyear{Buyya}).
 Computação em nuvem, caracteriza pela infraestrutura como uma “nuvem” na qual negócios e usuários são capazes de acessar a partir de qualquer lugar do mundo e além disso sob demanda, a partir disso se obteve a transformação de desenvolver software para milhões de usuários consumirem como um serviço mais do que para usuários executar em seus próprios computadores (\citeauthoronline{Buyya}, \citeyear{Buyya}).
 
@@ -380,14 +380,15 @@ Para os modelos de serviços, é considerado software, plataforma e infraestrutu
 
 Os modelos de distribuição consiste em definir o nível de acesso a nuvem, desde um modelo mais restrito que é uma nuvem privada até o modelo mais permissivo como a nuvem pública. No modelo de nuvem privada, a infraestrutura da nuvem é fornecida exclusivamente a uma única organização, tendo seu gerenciamento pela própria organização ou uma terceira. Em um modelo de nuvem comunitária, seu uso é exclusivo de uma comunidade de consumidores de diversas organizações que tenham em comum os mesmos objetivos, políticas. Na nuvem pública, a infraestrutura é oferecida ao público em geral, seu uso pode ser gerenciado por uma empresa, centros acadêmicos, governos, ou combinações diversas. Além dos citados, existe o modelo híbrido que busca a combinação dos outros modelos com o objetivo de permanecer a usuários distintos mas que utilizem as mesmas tecnologias proprietárias ou padronizadas que permitam a portabilidade de dados e aplicações, tais como balanceamento de carga entre nuvens (\citeauthoronline{nist}, \citeyear{nist}).
 
+
 \section{IoT (Internet of Things)}
-\textit{Internet of Things} (IoT) é um paradigma que pode ser definido como uma interconexão de diversos dispositivos, ou coisas, sobre a Internet e com diversas funcionalidades que permitem medições sobre ambiente, comunicação e executar uma determinada ação. Existem diversas aplicações para IoT, podendo ser utilizado em um ambiente residencial como uma casa inteligente (Kelly), fornecendo reduções de consumo e automatizações de ações como ligar uma lâmpada, bem como pode também ser utilizado em cidades inteligentes, com diversos dispositivos coletando dados, como câmeras, e fornecendo informações úteis para monitoração, administração dos recursos públicos, entre outros.
+\textit{Internet of Things} (IoT) é um paradigma que pode ser definido como uma interconexão de diversos dispositivos, ou coisas, sobre a Internet, com diversas funcionalidades que permitem medições sobre ambiente, comunicação e execução de uma determinada ação. Existem diversas aplicações para IoT, podendo ser utilizado em um ambiente residencial como uma casa inteligente (\citeauthoronline{iot_kelly}, \citeyear{iot_kelly}), fornecendo reduções de consumo e automatizações de ações como ligar uma lâmpada, bem como pode também ser utilizado em cidades inteligentes, com diversos dispositivos coletando dados, como câmeras, e fornecendo informações úteis para monitoração, administração dos recursos públicos, entre outros.
 
-IoT pode ser definido em 3 categorias, sendo uma internet de pessoa para pessoa, pessoa para máquina ou máquina para máquina. Sendo que visão considera a presença pervasiva desses dispositivos capazes de interagir entre si e cooperar de forma a criar novos serviços e aplicações que tenham um objetivo em comum (Keyur Patel).
+IoT pode ser definido em 3 categorias, sendo uma internet de pessoa para pessoa, pessoa para máquina ou máquina para máquina. Sendo que a visão do IoT, como conceito e paradgma, considera a presença pervasiva desses dispositivos capazes de interagir entre si e cooperar de forma a criar novos serviços e aplicações que tenham um objetivo em comum. Onde seja possível ter um mundo onde o real, digital e virtual convirjam para criar ambientes cada vez mais inteligentes (\citeauthoronline{iot_patel}, \citeyear{iot_patel}).
 
-Existe um conjunto de características fundamentais que se destacam no IoT. Interconectividade entre os dispositivos, qualquer coisa pode ser interconectada independente do contexto ou localização. Serviços relacionados a coisas,  que consideram as restrições dos dispositivos e impactos relacionados, como a proteção da privacidade,  consistência semântica entre entre coisas virtuais e físicas, entre outros. Heterogeneidade, cada dispositivo se baseia em tecnologias e hardwares distintos, e são capazes de comunicar entre si através de diferentes plataformas e redes. Mudanças dinâmicas e constantes, cada dispositivo pode mudar seu estado (conectado, desconectado, modo de suspensão, etc.) bem como sua localização, velocidade de conexão e quantidade de dispositivos envolvidos. Gerenciamento em grande escala, dado a quantidade de dispositivos conectados e interagindo, existe um grande conjunto de dados sendo trafegado pela Internet. Segurança (Safety) é um fator essencial a ser considerado nos dispositivos e em seu processo de comunicação, principalmente aqueles relacionados ao bem-estar.  (Keyur Patel)
+Existe um conjunto de características fundamentais que se destacam no IoT. Interconectividade entre os dispositivos, qualquer coisa pode ser interconectada independente do contexto ou localização. Serviços relacionados a coisas,  que consideram as restrições dos dispositivos e impactos relacionados, como a proteção da privacidade,  consistência semântica entre entre coisas virtuais e físicas, entre outros. Heterogeneidade, cada dispositivo se baseia em tecnologias e hardwares distintos, e são capazes de comunicar entre si através de diferentes plataformas e redes. Mudanças dinâmicas e constantes, cada dispositivo pode mudar seu estado (conectado, desconectado, modo de suspensão, etc.) bem como sua localização, velocidade de conexão e quantidade de dispositivos envolvidos. Gerenciamento em grande escala, dado a quantidade de dispositivos conectados e interagindo, existe um grande conjunto de dados sendo trafegado pela Internet. Segurança (Safety), um fator essencial a ser considerado nos dispositivos e em seu processo de comunicação, principalmente aqueles relacionados ao bem-estar (\citeauthoronline{iot_patel}, \citeyear{iot_patel}).
 
-Existem principalmente 5 tecnologias que são utilizadas para desenvolvimento e comunicação de produtos e serviços baseados em IoT. Identificação por radiofrequência (RFID). WSN, computação em nuvem e software (Kyoochun Lee)
+Existem atualmente 5 tecnologias que são amplamente utilizadas para desenvolvimento e comunicação de produtos e serviços baseados em IoT. Identificação por radiofrequência (\textit{Radio frequency identification}, RFID), é uma tecnologia que permite identificação e captura de dados automática através de ondas de rádio, as tags utilizadas no RFID podem ser passivas, quando o leitor provê a energia necessária para transferir o dado, podem ser ativas, quando a tag possui uma bateria integrada e inicia as comunicações com o leitor, ou finalmente, podem ser do tipo semi-passiva, possuindo bateria para o chip interno mas a comunicação é através do leitor. Redes de sensores wireless (\textit{Wireless sensor networks}, WSN), é uma tecnologia que consiste em dispositivos autônomos distribuídos e equipados com sensores que permitem o monitoramento de condições físicas ou do ambiente, permitindo topologias diferentes de redes, com baixo consumo de energia, baixo custo e comunicação \textit{wireless}. \textit{Middleware}, é uma camada de software entre aplicações com o objetivo de facilitar ao desenvolvedores a realização da comunicação e lidar com entradas e saídas das aplicações, seu foco está em esconder os detalhes de diferentes tecnologias. Computação em nuvem que, como comentado na seção \ref{comp_nuvem}, consiste de um modelo de acesso sob-demanda a recursos compartilhados de computadores, redes, servidores, armazenamento, entre outros que são necessários para aplicações IoT que necessitam tomar decisões em tempo real. Aplicações IoT, que permitem interações entre dispositivos e humano para dispositivo de uma maneira confiável e robusta, onde se tem a necessidade de garantir que os dados sejam transmitidos e recebidos em um tempo aceitável.(\citeauthoronline{iot_lee}, \citeyear{iot_lee}).
 
 
 \chapter{Tecnologias Utilizadas}
@@ -456,19 +457,41 @@ Na área de processamento de imagens, existem alguns agrupamento de técnicas, o
 \end{itemize}
 
 \section{ZeroTier}
+O ZeroTier é um hypervisor de rede distribuído construído sobre uma rede global \textit{peer-to-peer} criptograficamente segura. Suas principais características consiste em possuir uma virtualização de rede avançada, gerenciamento de recursos como um \textit{switch SDN} e IPSec, servido em redes locais ou globais conectando diversos tipos de dispositivos, como celulares, computadores e equipamentos de rede (\citeauthoronline{zerotier}, \citeyear{zerotier}).
+
+Sua arquitetura consiste virtualização das camadas Ethernet, similar ao modelo VXLAN, porém em uma rede totalmente criptografada. Possui descoberta de vizinhança similar a descoberta de rede da Internet com o DNS, utiliza o conceito de planetas (\textit{planet}) e luas (\textit{moons}) para serem os servidores responsáveis por identificar as mudanças de IPs na rede (\citeauthoronline{zerotier}, \citeyear{zerotier}).
+
+Assim, é possível criar redes privadas com o ZeroTier conectando diversos dispositivos de uma maneira simples, sem preocupar em como irão se conectar, se estão por trás de um NAT (\textit{Network Address Translation}, qualidade do link entre os nós ou qual caminho realizar a comunicação (\citeauthoronline{zerotier}, \citeyear{zerotier}).
+
 \section{Intel Movidius Neural Computer Stick (NCS)}
+O \textit{Intel Movidius Neueral Computer Stick} (NCS) é um dispositvo dedicado para processamento na área de visão computacional. Este dispositivo conta com uma VPU (Vision Processing Unit), com Intel Movidius Myriad 2, que possui em sua arquitetura uma memória DRAM LPDDR3 de 4Gbits e um microprocessador SPARC LEON, como mostrado na figura \ref{fig:intel_movidius}.
+
+\begin{figure}[H]
+    \centering
+    \caption{Arquitetura da Intel Movidius NCS}
+    \includegraphics[width=0.7\textwidth]{intel_movidius}
+    \caption*{Fonte: (\citeauthoronline{intel_movidius}, \citeyear{intel_movidius})}
+    \label{fig:intel_movidius}
+\end{figure}
+
+Sua aplicação está principalmente na rápida prototipação, validação e desenvolvimento de redes neurais profundas (DNN) em aplicações instaladas em dispositivos. Com sua VPU de baixo consumo, permite que aplicações de inteligência artificial não dependam de conexões com a nuvem, como detecção de objetos a partir de uma câmera. Suporta \textit{frameworks} de desenvolvimento TensorFlow e Caffe, e sistemas operacionais de 64 bits como o Raspberry Pi 3 ou Ubuntu 16.04.
+
+
 \section{EC2 AWS}
 
 \chapter{Metodologia do Trabalho}
-\section{Gerenciamento de tarefas}
-Para o desenvolvimento do projeto foi utilizado a metodologia ágil Scrum, onde através de Sprints foi definido os ciclos de desenvolvimento e testes de cada nova feature e integração do sistema, com as devidas alterações quando necessário.
 
-Uma das ferramentas de gerenciamento online utilizada foi o Trello.
+\section{Gerenciamento de tarefas}
+Para o desenvolvimento do projeto foi utilizado a metodologia ágil Scrum, com o objetivo de otimizar o processo de pesquisa e desenvolvimento do trabalho. Onde através de Sprints foi definido os ciclos de pesquisa,  desenvolvimento e testes do sistema. 
+
+Para o controle das entregas, foi utilizado a metodologia Kanbam através da utilização da ferramenta de gerenciamento online Trello.
+
 
 \section{Gerenciamento de código}
-Para o gerenciamento de código foi utilizado o GitHub para versionamento, e consulta dos materiais utilizados e desenvolvidos pela equipe. 
+Para o gerenciamento de código foi utilizado o GitHub para hospedar e versionar os códigos utilizados e desenvolvidos pela equipe.
 
 \section{Cronograma}
+Foi realizado um cronograma inicial, considerando tempo necessário em cada etapa do trabalho, como é mostrado na Figura \ref{fig:cronograma}.
 
 \begin{figure}[H]
     \centering
