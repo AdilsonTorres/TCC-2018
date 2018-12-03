@@ -869,7 +869,9 @@ Sua API consiste em um único \text{endpoint}, onde o identificador do dispositi
 A transmissão do e-mail é realizada através da biblioteca Python Boto3, que é uma interface dos serviços SES (\textit{Simple Email Service}) da AWS.
 
 \subsection{Submissão de vídeos}
-TODO
+O serviço de submissão de vídeos é responsável por coletar e enviar o vídeo da câmera ao serviço de detecção de objetos. No escopo de implementação, um Raspberry Pi com uma câmera conectada foi utilizado como dispositivo de coleta, nele é implementado o código de coleta e envio para o serviço de detecção de objetos, através da identificação do dispositivo é solicitado ao detector que fornece uma \textit{thread} para envio do vídeo, caso não consiga após 5 tentativas a solicitação é abortada e notificado.
+
+A transmissão do vídeo é feita através da biblioteca OpenCV para captura da câmera e da biblioteca \textit{Requests} para comunicação. 
 
 \subsection{Serviço de usuários}
 O serviço de usuários é responsável por armazenar as informações relacionadas aos usuários do sistema bem como os dispositivos, câmeras, possuídos. Sua API consiste em endpoints que realizam as operações básicas no banco de dados, isto é, adição, busca, edição e remoção de usuários e dispositivos. Está contido nessas informações campos relevantes ao endereço dos usuários e onde estão localizados as câmeras, informações de contato que poderão ser utilizadas no serviço de ações, identificadores únicos tanto dos usuários quanto das câmeras para validação.
