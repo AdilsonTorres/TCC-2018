@@ -851,7 +851,6 @@
 %% Portuguese name
 \let\listadetabelas\listoftables\relax
 
-
 %%%%%%  BIBLIOGRAPHY  %%%%%%
 
 \renewenvironment{thebibliography}[1]%
@@ -969,7 +968,7 @@
 \providecommand{\ABNTuppercasetitulodata}{}
 \newcommand{\titulo}[1]{
 \renewcommand{\ABNTtitulodata}{#1}
-\renewcommand{\ABNTuppercasetitulodata}{\uppercase{#1}}
+\renewcommand{\ABNTuppercasetitulodata}{#1}
 }
 \newcommand{\tituloformat}{\ABNTtitulosize\ABNTchapterfont}
 
@@ -1331,5 +1330,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  End of POLITEX.CLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% EXTRAS
 
 \endinput

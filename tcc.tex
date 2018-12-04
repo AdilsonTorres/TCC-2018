@@ -48,7 +48,7 @@
 
 % ========== Opções do documento ==========
 % Título
-\titulo{Monitoramento Inteligente de Ambientes com foco no bem-estar}
+\titulo{Monitoramento inteligente de ambientes com foco no bem-estar}
 
 % Autor
 \autor{Adilson Torres Gregório de Souza \\
@@ -139,32 +139,37 @@ Responsáveis
 
 
 % ========== Dedicatória (opcional) ==========
-% \dedicatoria{Dedicatória}
+\dedicatoria{Dedicatória}
 
 
 % ========== Agradecimentos ==========
-% \begin{agradecimentos}
+\begin{agradecimentos}
 
-% Obrigado...
+Obrigado...
 
-% \end{agradecimentos}
+\end{agradecimentos}
 
 
 % ========== Epígrafe (opcional) ==========
-%\epigrafe{%
-%	\emph{``Epígrafe''}
-%	\begin{flushright}
-%		-{}- Autor
-%	\end{flushright}
-%}
+\epigrafe{%
+	\emph{``Na vida, não existem soluções. Existem forças em marcha: é preciso criá-las e, então, a elas seguem-se as soluções.''}
+	\begin{flushright}
+		-{}- Antoine de Saint-Exupéry
+	\end{flushright}
+}
 
+% Opções:
+%
+% "Na vida, não existem soluções. Existem forças em marcha: é preciso criá-las e, então, a elas seguem-se as soluções." Antoine de Saint-Exupéry
+% O sucesso é a soma de pequenos esforços repetidos dia após dia. Robert Collier
+% Ser homem é ser responsável. É sentir que colabora na construção do mundo. Antoine de Saint-Exupéry
 
 % ========== Resumo ==========
 \begin{resumo}
 Resumo...
-
+%
 \\[3\baselineskip]
-
+%
 \textbf{Palavras-Chave} -- Palavra, Palavra, Palavra, Palavra, Palavra.
 \end{resumo}
 
@@ -172,9 +177,9 @@ Resumo...
 % ========== Abstract ==========
 \begin{abstract}
 Abstract...
-
+%
 \\[3\baselineskip]
-
+%
 \textbf{Keywords} -- Word, Word, Word, Word, Word.
 \end{abstract}
 
@@ -183,6 +188,9 @@ Abstract...
 \listadefiguras
 \listadetabelas
 
+% \begin{pretextualsection}{Lista de siglas}
+% \sigla{ABNT}{Associação}
+% \end{pretextualsection}
 % ========== Listas definidas pelo usuário (opcional) ==========
 
 
@@ -464,7 +472,7 @@ Sua arquitetura consiste virtualização das camadas Ethernet, similar ao modelo
 Assim, é possível criar redes privadas com o ZeroTier conectando diversos dispositivos de uma maneira simples, sem preocupar em como irão se conectar, se estão por trás de um NAT (\textit{Network Address Translation}, qualidade do link entre os nós ou qual caminho realizar a comunicação (\citeauthoronline{zerotier}, \citeyear{zerotier}).
 
 \section{Intel Movidius Neural Computer Stick (NCS)}
-O \textit{Intel Movidius Neural Computer Stick} (NCS) é um dispositvo dedicado para processamento na área de visão computacional. Este dispositivo conta com uma VPU (Vision Processing Unit), com Intel Movidius Myriad 2, que possui em sua arquitetura uma memória DRAM LPDDR3 de 4Gbits, um microprocessador SPARC (Scalable Processor Architecture) LEON, e 12 processadores SHAVE (Streaming Hybrid Architecture Vector Engine) que é arquitetura híbrida contendo múltiplas unidades funcionais para alto paralelismo e vazão, garantindo em seu design baixo consumo de energia e maximização da performance, como mostrado na figura \ref{fig:intel_movidius}.
+O \textit{Intel Movidius Neural Computer Stick} (NCS) é um dispositvo dedicado para processamento na área de visão computacional. Este dispositivo conta com uma VPU (Vision Processing Unit), com Intel Movidius Myriad 2, que possui em sua arquitetura (mostrada na Figura \ref{fig:intel_movidius}) uma memória DRAM LPDDR3 de 4Gbits, um microprocessador SPARC (Scalable Processor Architecture) LEON e 12 processadores SHAVE (Streaming Hybrid Architecture Vector Engine) que é arquitetura híbrida contendo múltiplas unidades funcionais para alto paralelismo e vazão, tendo em seu design um baixo consumo de energia e maximização de performance (\citeauthoronline{intel_movidius}, \citeyear{intel_movidius}).
 
 \begin{figure}[H]
     \centering
@@ -474,12 +482,14 @@ O \textit{Intel Movidius Neural Computer Stick} (NCS) é um dispositvo dedicado 
     \label{fig:intel_movidius}
 \end{figure}
 
-Seu funcionamento consiste em após o dispositivo NCS está conectado, o arquivo com o modelo da rede neural é carregado na memória, o processador LEON executa um \textit{firmware} que é responsável por coordenar o recebimento do arquivo com o modelo da rede neural e imagens para inferência e também cuidar do monitoramento da temperatura. O conjunto de processadores SHAVE recebem os dados processados pelo processador LEON, e realiza as operações de paralelismo, como multiplicação de matrizes. O resultado da rede neural e estatísticas associadas é mandado de volta a máquina que está conectada ao NCS. A comunicação entre o dispositivo NCS e a máquina é feita através da biblioteca NCAPI (Neural Compute API), que cuida da inicialização do dispositivo e carrega o \textit{firmware} necessário para inicializar o recebimento dos arquivos a serem processados.  
+Seu funcionamento consiste em após o dispositivo NCS está conectado, o arquivo com o modelo da rede neural é carregado na memória, o processador LEON executa um \textit{firmware} que é responsável por coordenar o recebimento do arquivo com o modelo da rede neural e imagens para inferência, além de cuidar do monitoramento da temperatura. O conjunto de processadores SHAVE recebem os dados processados pelo processador LEON, e realiza as operações de paralelismo, como multiplicação de matrizes. O resultado da rede neural e estatísticas associadas é mandado de volta a máquina que está conectada ao NCS. A comunicação entre o dispositivo NCS e a máquina é feita através da biblioteca NCAPI (Neural Compute API), que cuida da inicialização do dispositivo e carrega o \textit{firmware} necessário para inicializar o recebimento dos arquivos a serem processados (\citeauthoronline{intel_movidius}, \citeyear{intel_movidius}).  
 
 Sua aplicação está principalmente na rápida prototipação, validação e desenvolvimento de redes neurais profundas (DNN) em aplicações instaladas em dispositivos. Com sua VPU de baixo consumo, permite que aplicações de inteligência artificial não dependam de conexões com a nuvem, como detecção de objetos a partir de uma câmera. Suporta \textit{frameworks} de desenvolvimento TensorFlow e Caffe, e sistemas operacionais de 64 bits como o Raspberry Pi 3 ou Ubuntu 16.04.
 
 
-\section{EC2 AWS}
+\section{Amazon EC2}
+O Amazon EC2 (Amazon Elastic Compute Cloud) é um serviço web que provê capacidade computacional na nuvem de uma maneira segura, ajustável e escalável.
+
 
 \chapter{Metodologia do Trabalho}
 
