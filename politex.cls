@@ -20,7 +20,10 @@
 %%                            PREAMBLE                              %%
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% % ========= Glossários ===============
+% \usepackage[acronym]{glossaries}
+% \makenoidxglossaries
+% \input{glossary.tex}
 
 %%%%%%  IDENTIFICATION  %%%%%%
 \NeedsTeXFormat{LaTeX2e}%
